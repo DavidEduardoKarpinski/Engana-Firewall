@@ -12,7 +12,7 @@ print(url)
 cabecalho = {"User-Agent": input(">>>> Insira o User-Agent"), "Cookie": input(">>>> Insira o cookie") }
 
 #Parte executável do código: A variável req recebe a url e o dicionário cabecalho, que recebeu anteriormente o User-Agent e o Cookie. 
-#A resposta utiliza o método urlopen, e recebe req. A variável html recebe req, com o método .read(), que nos permite visualizar o conteúdo HTML da página.
+#A resposta utiliza o método urlopen, e recebe req. A variável html recebe req, com o método .read(), que nos permite visualizar o conteúdo HTML da página. Em caso de erros, a ferramente irá retornar o tipo do erro.
 try:
     req = request.Request(url, headers=cabecalho)
     resposta = request.urlopen(req)
